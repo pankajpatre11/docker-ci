@@ -6,3 +6,4 @@ RUN apt-get update
 RUN apt-get install maven -y
 
 USER jenkins
+EXPOSE 8085
