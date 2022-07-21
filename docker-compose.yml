@@ -22,6 +22,8 @@ services:
       JENKINS_OPTS: --prefix=/jenkins
     volumes:
       - jenkins-home:/var/jenkins_home
+    ports: 
+      - 8085:8085
     networks:
       - docker-ci-network
 
@@ -37,7 +39,8 @@ services:
     volumes:
       - sonarqube-data:/opt/sonarqube/data
       - sonarqube-extensions:/opt/sonarqube/extensions
-
+    ports: 
+      - 9000:9000
   nginx:
     depends_on:
       - jenkins
