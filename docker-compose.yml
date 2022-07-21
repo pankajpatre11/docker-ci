@@ -52,3 +52,5 @@ services:
       - ${NGINX_PORT_MAPPING}
     networks:
       - docker-ci-network
+    ports: 
+      - 8080:8080
